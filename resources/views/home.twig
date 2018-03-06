@@ -7,14 +7,14 @@
         <li><a href="http://thepubclubwindsor.com/" class="hidden-mobile" target="_blank">The Pubclub</a></li>
         <li><a href="http://bullandbarrel.com/" class="hidden-mobile" target="_blank">The Bull and Barrel</a></li>
         <li><a href="http://level3windsor.com/" class="hidden-mobile" target="_blank">L3vel Vodka Emporium</a></li>
-        <li><a href="#0" class="modalTrigger">Contact Us</a></li>
+        <li><a href="#form">Contact Us</a></li>
     </ul>
 </nav>
 
 <header>
     <img src="http://res.cloudinary.com/darkroast-digital/image/upload/v1516301584/iamdowntownwindsor.com/logo.png" alt="I am Downtown Windsor.com" draggable="false">
     <h1>{{ content.slogan }}</h1>
-    <h5><a href="#0" class="modalTrigger"><strong>Click Here</strong></a> To Plan Your Night Or Visit The Links Below</h5>
+    <h5><a href="#form"><strong>Click Here</strong></a> To Plan Your Night Or Visit The Links Below</h5>
 </header>
 
 <section class="content">
@@ -32,13 +32,9 @@
             </li>
         {% endfor %}
     </ul>
-</section>
 
-<div class="modal">
-    <div class="modalClose">&times;</div>
-    <div class="block">
+    <div class="form-container container" id="form">
         <h6>Plan Your Night!</h6>
-        <hr>
         <form action="{{ path_for('home') }}" method="post" class="form">
             {{ csrf_field() | raw }}
 
@@ -80,8 +76,6 @@
             <button type="submit">Submit</button>
         </form>
     </div>
-</div>
-
-<div class="overlay"></div>
+</section>
 
 {% endblock %}

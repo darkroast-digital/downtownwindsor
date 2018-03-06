@@ -11,7 +11,7 @@ class HomeController extends Controller
     public function index($request, $response, $args)
     {
         $content = Yaml::parse(file_get_contents(__DIR__ . '/../../resources/content/home.yaml'));
-
+        
         return $this->c->view->render($response, 'home.twig', compact('content'));
     }
 

@@ -4145,17 +4145,9 @@ th {
 |--------------------------------------------------------------------------
 */
 #app {
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden;
   background: #1D213E url("http://res.cloudinary.com/darkroast-digital/image/upload/v1516301585/iamdowntownwindsor.com/bg.jpg");
   background-size: cover;
-}
-
-@media only screen and (max-width: 48rem) {
-  #app {
-    overflow: scroll;
-  }
+  background-attachment: fixed;
 }
 
 @media only screen and (max-width: 48rem) {
@@ -4169,6 +4161,7 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 100;
   background: -webkit-gradient(linear, left top, right top, from(#17171A), color-stop(#1D213E), to(#17171A));
   background: linear-gradient(to right, #17171A, #1D213E, #17171A);
 }
@@ -4218,7 +4211,7 @@ h1 {
 header {
   width: 100vw;
   text-align: center;
-  margin-top: 5.0625rem;
+  margin-top: 3.375rem;
 }
 
 @media only screen and (max-width: 48rem) {
@@ -4323,22 +4316,25 @@ header h5 a {
   border-radius: 50%;
 }
 
-.modalClose {
-  position: absolute;
-  top: 1.6875rem;
-  right: 1.6875rem;
-  color: #ffffff;
-  font-size: 2.28069735rem;
-  cursor: pointer;
-  pointer-events: none !important;
+.form-container {
+  margin: 3rem auto 0;
+  padding-bottom: 3rem;
 }
 
-.modal .block {
-  max-height: 80%;
-  overflow: scroll;
-}
-
-.modal h6 {
-  color: #17171A;
+.form-container h6 {
+  color: white;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  text-align: center;
+  margin: 0 auto 2rem;
+  text-transform: uppercase;
+  font-size: 2rem;
+  width: 100%;
+}
+
+.form-container form {
+  margin: 0 auto;
+}
+
+.form-container form label {
+  color: white;
 }
